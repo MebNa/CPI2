@@ -1,0 +1,751 @@
+* {
+  font-family: 'Simpsonfont', sans-serif;
+  font-family: 'Akbar', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: white;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background-image: url('./img/wrapper.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 0;
+  overflow-x: hidden;
+}
+
+body::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+/* start */
+.merch1 {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  height: 400px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: start;
+}
+
+.card {
+  width: 80px;
+  border-radius: .75rem;
+  background-size: cover;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 2rem;
+  margin: 0 10px;
+  display: flex;
+  align-items: flex-end;
+  transition: .6s cubic-bezier(.28,-0.03,0,.99);
+  box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
+}
+
+.card > .row {
+  color: white;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.card > .row > .icon {
+  background: #223;
+  color: white;
+  border-radius: 50%;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+}
+
+.card > .row > .description {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+  height: 80px;
+  width: 520px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition-delay: .3s;
+  transition: all .3s ease;
+}
+
+.description p {
+  color: #b0b0ba;
+  padding-top: 5px;
+}
+
+.description h4 {
+  text-transform: uppercase;
+}
+
+input {
+  display: none;
+}
+
+input:checked + label {
+  width: 600px;
+}
+
+input:checked + label .description {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+.card[for="c1"] {
+  background-image: url('img/product1.png');
+  background-color: rgb(255, 222, 0) ;
+}
+.card[for="c2"] {
+  background-image: url('img/product2.png');
+  background-color: rgb(255, 222, 0) ;
+}
+.card[for="c3"] {
+  background-image: url('img/OYHIU71\ 1.png');
+  background-color: rgb(255, 222, 0) ;
+}
+.card[for="c4"] {
+  background-image: url('img/Hoodie_Mockup\ 1.png');
+  background-color: rgb(255, 222, 0) ;
+}
+/* stop */
+
+/* countdown */
+#countdown-election{
+  margin: 100px;
+}
+
+#countdown-election iframe {
+  margin: 30px;
+}
+
+#countdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white; /* Màu chữ trắng */
+  padding: 20px;
+  font-size: 2em;
+  margin: 50px;
+}
+
+.countdown-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 10px;
+  background-color: #FFCC00; 
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.countdown-label {
+  font-size: 0.8em;
+  margin-bottom: 5px;
+}
+
+.countdown-value {
+  font-weight: bold;
+}
+
+/* stop */
+
+#wrapper {
+  min-width: 1280px;
+  max-width: 1280px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+
+#nav {
+  width: 960px;
+  margin: 0 auto;
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+
+#nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-item {
+  /* width: 124px; */
+  word-wrap: break-word;
+  justify-content: center;
+}
+
+#voting {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding-top: 100px;
+}
+
+#voting-annoucement {
+  margin-top: 16px;
+  width: 675px;
+}
+
+#voting-info {
+  letter-spacing: 4px;
+  margin-top: 32px;
+}
+
+#voting-info .value {
+  color: rgb(255, 222, 0);
+}
+
+#voting-info .voting-keypair {
+  width: 655px;
+}
+
+#voting-action {
+  margin-top: 10px;
+  display: flex;
+  gap: 20px;
+}
+
+#voting-action button {
+  width: 167px;
+  background-color: rgb(255, 222, 0);
+  font-size: 25px;
+  font-weight: bold;
+  line-height: 1.6;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  border-radius: 10px;
+  border: none;
+}
+
+#voting-right-badge img {
+  height: 462px;
+  width: 462px;
+  border-radius: 100%;
+}
+
+#about {
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  padding: 0 20px;
+}
+
+#about-left img {
+  width: 481px;
+  height: 481px;
+}
+
+#about-right-title {
+  display: flex;
+  justify-content: center;
+}
+
+#about-right img {
+  width: 286.233px;
+  height: 81.3167px;
+}
+
+#about-description h3 {
+  line-height: 1.6;
+  letter-spacing: 5px;
+}
+
+#about-right span {
+  color: rgb(255, 222, 0);
+}
+
+#about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-size: 12px;
+  line-height: 1.6;
+  letter-spacing: 5px;
+  font-weight: bold;
+}
+
+#cip {
+  display: flex;
+  flex-direction: column;
+  margin-top: 200px;
+  padding: 0px 200px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#cip-title img {
+  width: 715px;
+  height: 72px;
+  left: 491px;
+  top: 2530px;
+
+
+color: #FFCC25;
+
+text-shadow: 0px 4.8px 4.8px rgba(0, 0, 0, 0.25);
+}
+
+#cip-content {
+  margin-top: 10px;
+}
+
+
+#cip-content span{
+  color: rgb(255, 222, 0);
+}
+.yellow-text {
+  color: rgb(255, 222, 0);
+  margin-top: 10px;
+}
+
+#roadmap{
+  margin-top: 100px;
+}
+#roadmap-content {
+  margin: 50px;
+  background-color: #2f3542;
+  border: 2px solid rgb(255, 222, 0);
+  color: #FFCC25;
+  text-shadow: 0px 4.8px 4.8px rgba(0, 0, 0, 0.25);
+  padding: 20px;
+  border-radius: 20px;
+  margin-top: 100px;
+  width: 350px;
+  height: 170px;
+}
+
+#roadmap-content p{
+  color: #FFCC25;
+}
+
+#buy-merch {
+  width: 100px;
+  height: 50px;
+}
+
+#merch {
+  margin: 50px;
+  
+}
+
+#merch-content {
+  margin-top: 50px;
+  display: flex;
+  background-color: #FFCC25;
+  width: 1800px;
+}
+
+#merch-content img {
+  width: 200px; 
+}
+
+
+#comparision {
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  
+}
+
+#comparision-left,
+#comparision-right {
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.039);
+  border-radius: 20px;
+  border: 2px solid yellow;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #2f3542;
+  border: 2px solid rgb(255, 222, 0);
+  padding: 30px;
+}
+
+#comparision-center img {
+  width: 379.5px;
+  height: 379.5px;
+}
+
+.compare-keypair {
+  display: flex;
+  justify-content: space-between;
+}
+
+#second-about {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+
+#second-about-compare {
+  display: flex;
+  gap: 300px;
+}
+
+#second-about-compare img {
+  width: 263px;
+  height: 263px;
+}
+
+
+.candidate {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+#final {
+  margin-top: 50px;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  padding-bottom: 100px;
+}
+
+#final-img img {
+  width: 173px;
+  height: 173px;
+}
+
+#final-content span {
+  color: rgb(255, 222, 0);
+}
+
+.vote-btn {
+  padding: 12px 50px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(255, 222, 0) ;;
+  color: #fff;
+  font-size: 18px;
+  outline: none;
+  cursor: pointer;
+
+  position: relative;
+  overflow: hidden;
+  box-shadow: 6px 7px 40px -4px rgba(0, 0, 0, 0.2);
+}
+
+.vote-btn span {
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.3);
+
+  width: 100px;
+  height: 100px;
+  margin-top: -50px;
+  margin-left: -50px;
+
+  animation: ripple 1s;
+  opacity: 0;
+
+  z-index: 999;
+}
+
+@keyframes ripple {
+  from {
+    opacity: 1;
+    transform: scale(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: scale(10);
+  }
+}
+
+#current-biden-votes,
+#current-trump-votes {
+  font-size: 25px;
+  font-weight: bold;
+  line-height: 1.6;
+  color: rgb(255, 222, 0);
+}
+
+.shareX {
+  display: inline-block;
+  padding: 5px;
+  background-color: #FFF176; 
+  border: 5px solid #FFEB3B;
+  border-radius: 15px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
+}
+
+.shareX a {
+  text-decoration: none;
+}
+
+.shareX button {
+  background-color: #448AFF; 
+  color: #FFF;
+  border: none;
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.shareX p{
+  color: white;
+}
+
+.shareX button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.shareX button:active {
+  transform: translateY(0);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+#countdown {
+  font-size: 2.5em;
+  color: #ff4757;
+  text-align: center;
+  background-color: black solid;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.countdown-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.countdown-text {
+  font-size: 1.2em;
+  color: #2f3542;
+  margin-bottom: 10px;
+}
+
+.disabled {
+  cursor: not-allowed;
+}
+
+@media (max-width: 700px) {
+  body {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background-image: url('./img/wrapper.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 0;
+    overflow-x: hidden;
+  }
+  
+  .merch1 {
+    height: auto; /* Thay đổi chiều cao thành tự động để nội dung không bị tràn ra ngoài */
+  }
+  
+  .container {
+    height: auto; /* Tương tự, cho phép container tự động điều chỉnh chiều cao */
+    flex-direction: column; /* Sắp xếp các card theo chiều dọc */
+  }
+  
+  .card {
+    width: calc(100% - 20px); /* Chiếm toàn bộ chiều rộng màn hình trừ đi lề */
+    margin: 10px 0; /* Điều chỉnh lề trên và dưới */
+  }
+  
+  .card > .row {
+    flex-direction: column; /* Sắp xếp các phần tử trong row theo chiều dọc */
+    align-items: center; /* Căn giữa các phần tử */
+  }
+  
+  .card > .row > .icon {
+    margin: 10px 0; /* Điều chỉnh lề trên và dưới */
+  }
+  
+  .card > .row > .description {
+    width: auto; /* Cho phép description tự động điều chỉnh chiều rộng */
+    height: auto; /* Và chiều cao */
+    opacity: 1; /* Hiển thị description luôn */
+    transform: translateY(0); /* Không cần transform */
+  }
+  
+  /* stop */
+  
+  /* countdown */
+  #countdown-election {
+    margin: 50px; /* Giảm lề */
+  }
+  
+  #countdown-election iframe {
+    width: 100%; /* Chiếm toàn bộ chiều rộng màn hình */
+    height: auto; /* Tự động điều chỉnh chiều cao */
+  }
+  
+  #countdown {
+    font-size: 1.5em; /* Giảm kích thước chữ */
+    padding: 10px; /* Giảm padding */
+    margin: 25px; /* Giảm lề */
+  }
+  
+  .countdown-item {
+    margin: 5px; /* Giảm lề */
+    padding: 10px; /* Giảm padding */
+  }
+  
+  /* stop */
+  
+  #nav {
+    width: auto; /* Cho phép nav tự động điều chỉnh chiều rộng */
+    flex-direction: column; /* Sắp xếp các mục theo chiều dọc */
+    gap: 20px; /* Giảm khoảng cách giữa các mục */
+  }
+  
+  #voting {
+    flex-direction: column; /* Sắp xếp các phần tử theo chiều dọc */
+    padding-top: 50px; /* Giảm padding */
+  }
+  
+  #voting-annoucement,
+  #voting-keypair {
+    width: 100%; /* Chiếm toàn bộ chiều rộng màn hình */
+  }
+  
+  #voting-action {
+    flex-direction: column; /* Sắp xếp các nút theo chiều dọc */
+    gap: 10px; /* Giảm khoảng cách giữa các nút */
+  }
+  
+  #voting-action button {
+    width: 100%; /* Chiếm toàn bộ chiều rộng màn hình */
+  }
+  
+  #voting-right-badge img {
+    width: 80%; /* Giảm kích thước ảnh */
+    height: auto; /* Tự động điều chỉnh chiều cao */
+  }
+  
+  #about {
+    flex-direction: column; /* Sắp xếp các phần tử theo chiều dọc */
+    gap: 20px; /* Giảm khoảng cách giữa các phần tử */
+  }
+  
+  #about-left img {
+    width: 100%; /* Chiếm toàn bộ chiều rộng màn hình */
+    height: auto; /* Tự động điều chỉnh chiều cao */
+  }
+  
+  #about-right-title img {
+    width: 80%; /* Giảm kích thước ảnh */
+  }
+  
+  #about-content {
+    font-size: 10px; /* Giảm kích thước chữ */
+  }
+  
+  #cip {
+    padding: 50px 20px; /* Điều chỉnh padding */
+  }
+  
+  #cip-title img {
+    width: 100%; /* Chiếm toàn bộ chiều rộng màn hình */
+    height: auto; /* Tự động điều chỉnh chiều cao */
+  }
+  
+  #roadmap-content {
+    width: calc(100% - 40px); /* Chiếm toàn bộ chiều rộng màn hình trừ đi padding */
+    height: auto; /* Tự động điều chỉnh chiều cao */
+    margin: 20px; /* Giảm lề */
+  }
+  
+  #merch-content {
+    flex-direction: column; /* Sắp xếp các hình ảnh theo chiều dọc */
+    width: 100%; /* Chiếm toàn bộ chiều rộng màn hình */
+  }
+  
+  #merch-content img {
+    width: 50%; /* Giảm kích thước ảnh */
+    margin-bottom: 10px; /* Thêm lề dưới cho mỗi ảnh */
+  }
+  
+  #comparision {
+    flex-direction: column; /* Sắp xếp các phần tử theo chiều dọc */
+    background-color: ;
+  }
+  
+  #comparision-left,
+  #comparision-right {
+    width: calc(100% - 20px); /* Chiếm toàn bộ chiều rộng màn hình trừ đi padding */
+  }
+  
+  #comparision-center img {
+    width: 100%; /* Chiếm toàn bộ chiều rộng màn hình */
+    height: auto; /* Tự động điều chỉnh chiều cao */
+  }
+  #comparision-center-x {
+    display: none;
+  }
+  #second-about-compare {
+    flex-direction: column; /* Sắp xếp các ảnh theo chiều dọc */
+    gap: 20px; /* Giảm khoảng cách giữa các ảnh */
+  }
+  
+  #second-about-compare img {
+    width: 80%; /* Giảm kích thước ảnh */
+  }
+  
+  #final {
+    /* padding: 50px 20px; */
+  }
+  
+  #final-img img {
+    width: 50%; /* Giảm kích thước ảnh */
+  }
+}
+
+
+

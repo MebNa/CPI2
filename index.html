@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto President US</title>
+    <link href="https://fonts.cdnfonts.com/css/simpsonfont" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="responsive.css">
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+</head>
+
+<body>
+    <script>
+        // Set the date we're counting down to
+        const countDownDate = new Date("Dec 11, 2024 00:00:00").getTime();
+
+        // Update the count down every 1 second
+        const x = setInterval(function() {
+            // Get today's date and time
+            const now = new Date().getTime();
+
+            // Find the distance between now and the count down date
+            const distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Output the result in an element with id="countdown"
+            document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
+            + minutes + "m " + seconds + "s ";
+
+            // If the count down is finished, write some text
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+    </script>
+    <div id="wrapper">
+        <div id="nav">
+            <a class="nav-item" href="#second-about">
+                <h3>
+                    Vote Now
+                </h3>
+            </a>
+            <a class="nav-item" href="#about">
+                <h3>
+                    About
+                </h3>
+            </a>
+            <a class="nav-item" href="#comparision">
+                <h3>
+                    Tokenomic
+                </h3>
+            </a>
+            <a class="nav-item" href="#roadmap">
+                <h3>
+                    Roadmap
+                </h3>
+            </a>
+            <a class="nav-item" href="https://t.me/cryptopresident2024CPI">
+                <h3>
+                    Telegram
+                </h3>
+            </a>
+        </div>
+        
+        <img style="display: none;" src="./img/wrapper.jpg" alt="" class="background">
+        <div id="voting">
+            <div id="voting-left">
+                <div class="div-img">
+                    <img width="507.617" height="181.4" src="img/crypto-president-transparent.png"
+                        alt="Crypto President" />
+                </div>
+                <div id="voting-annoucement" class="voting-annoucement">
+                    "$CPI to the Moon! 🚀 Whether it's Sleepy Joe or The Donald, this meme coin is PUMPED for the 2024 election. Don't get REKT by the polls, join the $CPI party!
+                </div>
+                <div id="voting-info">
+                    <div class="voting-keypair">
+                        <span class="key">
+                            Name:
+                        </span>
+                        <span class="value">
+                            CRYPTO PRESIDENT
+                        </span>
+                    </div>
+                    <div class="voting-keypair">
+                        <span class="key">
+                            Symbol:
+                        </span>
+                        <span class="value">
+                            $CPI
+                        </span>
+                    </div>
+                    <div class="voting-keypair">
+                        <span class="key">
+                            Total supply:
+                        </span>
+                        <span class="value">
+                            1,000,000,000
+                        </span>
+                    </div>
+                    <div class="voting-keypair">
+                        <span class="key">
+                            Address:
+                        </span>
+                        <span class="value">
+                            ????
+                        </span>
+                    </div>
+                    <div class="voting-keypair">
+                        <span class="key">
+                            Tax:
+                        </span>
+                        <span class="value">
+                            0
+                        </span>
+                    </div>
+                </div>
+                <div id="voting-action">
+                    <div>
+                        <a href="https://dexscreener.com" target="_blank">
+                            <button class="buying">Buy it</button>
+                        </a>
+                    </div>
+                    <div class="lock">
+                        <button>LP Lock</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="voting-right">
+                <div id="voting-right-badge">
+                  <img src="img/crypto-president.jpg" alt="crypto president" />
+                  <div id="back-content">
+                    </div>
+                </div>
+              </div>
+              
+        </div>
+
+        <div id="about">
+            <div id="about-left">
+                <img src="img/trump.jpg" alt="trump" />
+            </div>
+            <div id="about-right">
+                <div id="about-right-title">
+                    <img src="img/about-transparent.png" alt="about" />
+                </div>
+                <div id="about-description">
+                    <p>
+                        $CPI: Because Even Springfield Politics Needs a Blockchain
+                    </p>
+                </div>
+                <br>
+                <div id="about-content">
+                    <p>
+
+                        <!--  -->
+                          Hey there, <span>ELECTABLE INVESTOR!</span>
+                    </p>
+                    <p>
+                        So grab a Duff Beer, HODL tight, and let's ride this meme-powered rocket to the moon! 🚀
+
+                    P.S We can't promise a visit from <span>Mr. Snrub</span>, but we can guarantee a wild ride in the crypto-verse.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div id="cip">
+            <div id="cip-title">
+                <img src="img/$CPI INFORMATION.png" alt="cpi" />
+            </div>
+            <div id="cip-content">
+                <p class="yellow-text">
+                    $CPI Supply and Token information
+                </p>
+                <p>
+                    <span>Low Transaction Tax:</span> We're talking lower than the chances of Mr. Burns winning a popularity contest. Your $CIP stays where it belongs – in your digital wallet!
+                    <br><br>
+                    <span>Perpetual Security:</span> Fort Knox ain't got nothin' on us. Our blockchain is more secure than Homer's secret stash of donuts.
+                    <br><br>
+                    <span>Transparency & Innovation:</span> We're not like those shady politicians making backroom deals. Our tokenomics are open for all to see, just like Flanders' heart (bless his soul).
+                    <br><br>
+                </p>
+                <p style="align-items: center;">
+                    But wait, there's more!
+                </p>
+               <p>  
+                    <span>Community-Driven:</span> $CPI is powered by the people, for the people (and the occasional talking dog, we don't judge).
+                    <br><br>
+                    <span>Meme-tastic Potential:</span> This ain't your grandpappy's coin. $CIP is primed for viral memes and internet fame. Get ready to HODL for the lulz!
+                </p>
+            </div>
+            <!-- <div id="comparision-center-x">
+                <img src="img/crypto-president.jpg" alt="crypto-president" />
+            </div> -->
+            <div id="comparision">
+                <div id="comparision-left">
+                    <div class="compare-keypair">
+                        <div>
+                            total supply
+                        </div>
+                        <div>
+                            1,000,000,000
+                        </div>
+                    </div>
+                    <div class="compare-keypair">
+                        <div>
+                            max supply
+                        </div>
+                        <div>
+                            1,000,000,000
+                        </div>
+                    </div>
+                    <div class="compare-keypair">
+                        <div>
+                            Cir Supply
+                        </div>
+                        <div>
+                            1,000,000,000
+                        </div>
+                    </div>
+                </div>
+                <div id="comparision-center">
+                    <img src="img/crypto-president.jpg" alt="crypto-president" />
+                </div>
+                <div id="comparision-right">
+                    <div class="compare-keypair">
+                        <div>
+                            <p>total supply:    </p>    
+                        </div>
+                        <div>
+                            CRYPTO PRESIDENT
+                        </div>
+                    </div>
+                    <div class="compare-keypair">
+                        <div>
+                            TICKER
+                        </div>
+                        <div>
+                            $CPI
+                        </div>
+                    </div>
+                    <div class="compare-keypair">
+                        <div>
+                            NETWORK
+                        </div>
+                        <div>
+                            SOLANA - MOONSHOT
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ROADMAP -->
+            <div id="roadmap">
+                <img src="img/ROADMAP.png" alt="RoadmapIMG">
+                <div id="roadmap-content">
+                    <p class="phase">Phase1: MEME</p><br>
+                    <p class="phase">Phase2: BUY AND HOLD</p><br>
+                    <p class="phase">Phase3: CHEER THE PRESIDENT</p><br>
+                </div>
+            </div>
+
+            <!-- MERCH -->
+            <div id="merch">
+                <img src="img/merch.png">
+
+            </div>
+
+            <div id="merch1">
+                <div class="container">
+                    <input type="radio" name="slide" id="c1" checked>
+                    <label for="c1" class="card">
+                        <div class="row">
+                            <div class="icon">1</div>
+                            <div class="description">
+                            </div>
+                        </div>
+                    </label>
+                    <input type="radio" name="slide" id="c2" >
+                    <label for="c2" class="card">
+                        <div class="row">
+                            <div class="icon">2</div>
+                            <div class="description">
+                            </div>
+                        </div>
+                    </label>
+                    <input type="radio" name="slide" id="c3" >
+                    <label for="c3" class="card">
+                        <div class="row">
+                            <div class="icon">3</div>
+                            <div class="description">
+                            </div>
+                        </div>
+                    </label>
+                    <input type="radio" name="slide" id="c4" >
+                    <label for="c4" class="card card4">
+                        <div class="row">
+                            <div class="icon">4</div>
+                            <div class="description">
+                            </div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <div id="buy-merch">
+                <button class="buy-merch">Buy</button>
+            </div>
+             
+
+            <div id="second-about">
+                <div id="second-about-title">
+                    <img src="img/VOTE FOR YOUR PRESIDENT.png" alt="VOTE" />
+                </div>
+                <div id="second-about-compare">
+                    <div class="candidate">
+                        <div>
+                            <img src="img/biden.jpg" alt="biden">
+                        </div>
+                        <div id="current-biden-votes">
+                        </div>
+                        <div>
+                                <button id="for-biden" class="vote-btn">J.Biden</button>
+                        </div>
+                        <div>
+                            <a href="https://twitter.com/intent/tweet?text=Join%20the%20Taptovote%20for%20Biden%20and%20earn%20free%20tokens!%20Just%20vote%20and%20share%20to%20receive%20your%20airdrop.%20Visit:https://cryptopresident.us#CryptoPresidentIndex%20#Tap2Earn" target="_blank">
+                                <button id="for-biden-share" class="vote-btn">Share</button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="candidate">
+                        <div>
+                            <img src="img/trump.jpg" alt="biden">
+                        </div>
+                        <div id="current-trump-votes">
+                        </div>
+                        <div>
+                            <button id="for-trump" class="vote-btn">J.Trump</button>
+                        </div>
+                        <div>
+                            <a href="https://twitter.com/intent/tweet?text=Join%20the%20Taptovote%20for%20Trump%20and%20earn%20free%20tokens!%20Just%20vote%20and%20share%20to%20receive%20your%20airdrop.%20Visit:https://cryptopresident.us#CryptoPresidentIndex%20#Tap2Earn" target="_blank">
+                                <button id="for-trump-share" class="vote-btn">Share</button>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+                <p class="will-share">Share the president with higher votes to receiver airdrop</p>
+            </div>
+
+            <div id="countdown-election">
+                <img src="img/2024 Presidential Election.png">
+                <!-- <h1>Tuesday,November 5,2024</h1>
+                    <div id="countdown">
+                        <div class="countdown-item">
+                          <span class="countdown-label">DAYS</span>
+                          <span class="countdown-value"></span>
+                        </div>
+                        <div class="countdown-item">
+                          <span class="countdown-label">HOURS</span>
+                          <span class="countdown-value"></span>
+                        </div>
+                        <div class="countdown-item">
+                          <span class="countdown-label">MINS</span>
+                          <span class="countdown-value"></span>
+                        </div>
+                        <div class="countdown-item">
+                          <span class="countdown-label">SECS</span>
+                          <span class="countdown-value"></span>
+                        </div>
+                    </div> -->
+
+                <script type="module" src="countdown.js"></script>
+                    <iframe src="https://www.270towin.com/2024-countdown-clock/widget300x380.php" width="300" height="380" border="0" frameBorder="0">
+                    </iframe>
+        </div>
+
+
+
+        <div id="final">
+            <div id="final-content">
+                Please be advised that <span>CRYPTO PRESIDENT</span> is a cryptocurrency created for entertainment
+                purposes and is not affiliated with or endorsed by <span>Donald J. Trump or Joe Biden</span>. While CPI Memecoin may
+                reference or incorporate elements related they persona, image, or likeness, it does not imply any direct endorsement,
+                partnership, or approval by Trump or Biden. Any resemblance or association between CPI Memecoin and
+                <span>Donald J. Trump and Joe Biden </span> is purely coincidental and intended for satirical or
+                humorous purposes.
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+
+
+</body>
+
+</html>
